@@ -1,172 +1,187 @@
-export default function PianoGuidePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">ピアノを用意する時の4つのポイント</h1>
-          <p className="text-xl mb-2 text-slate-200">これをチェックしておけば後から困ることがありません</p>
-          <p className="text-slate-300 max-w-2xl mx-auto">
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ピアノを用意する時の4つのポイント</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- Header -->
+      <header class="main-header">
+        <div class="container header-content">
+          <h1 class="header-title">ピアノを用意する時の4つのポイント</h1>
+          <p class="header-subtitle">
+            これをチェックしておけば後から困ることがありません
+          </p>
+          <p class="header-description">
             ピアノ購入前に必ず確認しておきたい重要なポイントをわかりやすくご説明します
           </p>
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            {/* Point 1 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">
-                  1
-                </div>
-                <h2 className="text-2xl font-bold text-slate-800">置き場所選びのポイント確認</h2>
+      <!-- Main Content -->
+      <main class="main-content-section">
+        <div class="container">
+          <div class="points-grid">
+            <!-- Point 1 -->
+            <div class="point-card">
+              <div class="point-header">
+                <div class="point-number point-number-blue">1</div>
+                <h2 class="point-title">置き場所選びのポイント確認</h2>
               </div>
-              <div className="text-slate-600 space-y-4">
+              <div class="point-details">
                 <p>
-                  <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">
+                  <span class="highlight-text">
                     スイッチ類・クーラー・壁際・窓際・床暖房
                   </span>
                   を避け、ピアノにとって良い場所、練習にとって良い場所を選びましょう。
                 </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>防音は、お金をかけるほどしっかり出来ますが、まずはかけなくても出来る方法をチェック</li>
-                  <li>実際の寸法にプラスして、椅子の引きしろ、調律スペースなど、実際にはもう少し場所が必要</li>
+                <ul class="detail-list">
+                  <li>
+                    防音は、お金をかけるほどしっかり出来ますが、まずはかけなくても出来る方法をチェック
+                  </li>
+                  <li>
+                    実際の寸法にプラスして、椅子の引きしろ、調律スペースなど、実際にはもう少し場所が必要
+                  </li>
                 </ul>
-                <p className="font-semibold text-blue-600">詳しくは「お役立ち情報　ピアノの置き場所編」へ</p>
+                <p class="point-link point-link-blue">
+                  詳しくは「お役立ち情報　ピアノの置き場所編」へ
+                </p>
               </div>
             </div>
 
-            {/* Point 2 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">
-                  2
-                </div>
-                <h2 className="text-2xl font-bold text-slate-800">ピアノ本体以外にかかる経費の確認</h2>
+            <!-- Point 2 -->
+            <div class="point-card">
+              <div class="point-header">
+                <div class="point-number point-number-red">2</div>
+                <h2 class="point-title">ピアノ本体以外にかかる経費の確認</h2>
               </div>
-              <div className="text-slate-600 space-y-4">
+              <div class="point-details">
                 <p>
-                  <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">ピアノの運搬代は必要です</span>
-                  。1階と2階でも違いますし、新規ご納品料金とその後の引越し等とは料金が違います。
+                  <span class="highlight-text"
+                    >ピアノの運搬代は必要です</span
+                  >。1階と2階でも違いますし、新規ご納品料金とその後の引越し等とは料金が違います。
                 </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
+                <ul class="detail-list">
                   <li>椅子・カバー・敷物・掃除用具などの必需品</li>
                   <li>メトロノーム、足台、補助ペダルは上達のために</li>
-                  <li>ピアノ調律は定期健診のようなもの。安心して任せられる主治医（ピアノ調律師）が頼り</li>
+                  <li>
+                    ピアノ調律は定期健診のようなもの。安心して任せられる主治医（ピアノ調律師）が頼り
+                  </li>
                 </ul>
-                <p className="font-semibold text-red-600">詳しくは「本体以外にかかる経費編」へ</p>
+                <p class="point-link point-link-red">
+                  詳しくは「本体以外にかかる経費編」へ
+                </p>
               </div>
             </div>
 
-            {/* Point 3 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">
-                  3
-                </div>
-                <h2 className="text-2xl font-bold text-slate-800">納品予定日の調整と注意点</h2>
+            <!-- Point 3 -->
+            <div class="point-card">
+              <div class="point-header">
+                <div class="point-number point-number-orange">3</div>
+                <h2 class="point-title">納品予定日の調整と注意点</h2>
               </div>
-              <div className="text-slate-600 space-y-4">
+              <div class="point-details">
                 <p>
-                  <span className="bg-yellow-100 px-2 py-1 rounded font-semibold">
+                  <span class="highlight-text">
                     お申込からご納品まで通常一週間かかります
                   </span>
                   。納品日の指定は出来ますが、時間のご指定は別料金になるのでご注意ください。
                 </p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
+                <ul class="detail-list">
                   <li>新品の人気機種は、数ヶ月待ちになるものもございます</li>
                   <li>毎週金曜日に最新納品情報が特約店に届いています</li>
-                  <li>中古は一品物です。人気の木目やUXシリーズ、グランドピアノは稀少</li>
+                  <li>
+                    中古は一品物です。人気の木目やUXシリーズ、グランドピアノは稀少
+                  </li>
                 </ul>
               </div>
             </div>
 
-            {/* Point 4 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold mr-4">
-                  4
-                </div>
-                <h2 className="text-2xl font-bold text-slate-800">ピアノの選び方</h2>
+            <!-- Point 4 -->
+            <div class="point-card">
+              <div class="point-header">
+                <div class="point-number point-number-green">4</div>
+                <h2 class="point-title">ピアノの選び方</h2>
               </div>
-              <div className="text-slate-600 space-y-4">
-                <ul className="space-y-3">
+              <div class="point-details">
+                <ul class="detail-list custom-list">
                   <li>
-                    <strong className="text-slate-800">生ピアノと電子ピアノ</strong>
+                    <strong>生ピアノと電子ピアノ</strong>
                     <br />
                     先生は、生ピアノが良いとおっしゃるけどそれはなぜ？
                   </li>
                   <li>
-                    <strong className="text-slate-800">新品ピアノと中古ピアノ</strong>
+                    <strong>新品ピアノと中古ピアノ</strong>
                     <br />
                     どちらが我が家にピッタリ？
                   </li>
                   <li>
-                    <strong className="text-slate-800">お店の選び方</strong>
+                    <strong>お店の選び方</strong>
                     <br />
                     価格？品質？アフターサービス？
                   </li>
                   <li>
-                    <strong className="text-slate-800">譲り受ける際のチェックポイント</strong>
+                    <strong>譲り受ける際のチェックポイント</strong>
                     <br />
                     ただでもらえるピアノは時にとても高くつく？
                   </li>
                 </ul>
-                <p className="bg-yellow-100 px-3 py-2 rounded font-semibold text-slate-800">
-                  気になることは、お尋ねください
-                </p>
+                <p class="info-banner">気になることは、お尋ねください</p>
               </div>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Contact Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">ピアノの置き場所診断受付中！！</h2>
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="container contact-content">
+          <h2 class="contact-title">ピアノの置き場所診断受付中！！</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <h3 className="text-lg font-semibold mb-3">📞 お電話でのお問い合わせ</h3>
-              <div className="text-2xl font-bold text-yellow-300 mb-2">0740-22-2063</div>
-              <div className="text-sm">10:30-19:30　月曜定休</div>
+          <div class="contact-grid">
+            <div class="contact-info-card">
+              <h3 class="contact-info-title">📞 お電話でのお問い合わせ</h3>
+              <div class="contact-number">0740-22-2063</div>
+              <div class="contact-hours">10:30-19:30　月曜定休</div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <h3 className="text-lg font-semibold mb-3">📱 携帯電話</h3>
-              <div className="text-2xl font-bold text-yellow-300 mb-2">090-4296-1913</div>
-              <div className="text-sm">吉田携帯</div>
+            <div class="contact-info-card">
+              <h3 class="contact-info-title">📱 携帯電話</h3>
+              <div class="contact-number">090-4296-1913</div>
+              <div class="contact-person">吉田携帯</div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <h3 className="text-lg font-semibold mb-3">📧 メールでのお問い合わせ</h3>
-              <div className="text-lg text-blue-200 mb-2">
-                <a href="mailto:yoshida@toriimusic.co.jp" className="hover:text-white transition-colors">
+            <div class="contact-info-card">
+              <h3 class="contact-info-title">📧 メールでのお問い合わせ</h3>
+              <div class="contact-email">
+                <a href="mailto:yoshida@toriimusic.co.jp">
                   yoshida@toriimusic.co.jp
                 </a>
               </div>
-              <div className="text-sm">毎日必ずメールチェックします</div>
+              <div class="contact-email-note">毎日必ずメールチェックします</div>
             </div>
           </div>
 
-          <a
-            href="tel:090-4296-1913"
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
+          <a href="tel:090-4296-1913" class="call-to-action-button">
             今すぐお電話で相談する
           </a>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 mt-8 max-w-2xl mx-auto border border-white/10">
-            <h3 className="text-xl font-semibold mb-2">株式会社トリイわにセンター</h3>
-            <p className="mb-1">〒520-0522　和邇中浜366　今西ビル2F</p>
-            <p className="font-semibold">担当：吉田健一（ピアノコーディネータ）</p>
+          <div class="company-info-card">
+            <h3 class="company-name">株式会社トリイわにセンター</h3>
+            <p class="company-address">〒520-0522　和邇中浜366　今西ビル2F</p>
+            <p class="company-contact">担当：吉田健一（ピアノコーディネータ）</p>
           </div>
         </div>
       </section>
     </div>
-  )
-}
+  </body>
+</html>
